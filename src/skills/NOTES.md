@@ -12,3 +12,24 @@ Requires the [node feature](https://github.com/devcontainers/features/tree/main/
 ```
 
 Each comma-separated source is passed to `pnpm dlx skills add <source> --global --agent <agent> --yes` as the remote user.
+
+## Examples
+
+Sources accept anything `skills add` does: `owner/repo`, a GitHub URL, and so on.
+
+```json
+"ghcr.io/mezum/devcontainer-features/skills:1": {
+    "skills": "https://github.com/vercel-labs/agent-skills"
+}
+```
+
+Install to another agent (e.g. `codex`, `cursor`, `gemini-cli`, `github-copilot`), or to all agents with `*`:
+
+```json
+"ghcr.io/mezum/devcontainer-features/skills:1": {
+    "skills": "anthropics/skills",
+    "agent": "codex"
+}
+```
+
+Run `pnpm dlx skills add --help` for the full list of supported agents.
