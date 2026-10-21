@@ -1,3 +1,10 @@
+## When to use
+
+- **Share the same skills across the team**: everyone who opens the dev container (or a Codespace) gets the same skills, with no per-person setup.
+- **Pick skills per repository**: skills are installed into the container, not your host, so each project gets only the skills relevant to it and nothing leaks into other projects.
+- **Use third-party skills without vendoring them**: reference a repository instead of copying skill files into yours. Rebuilding the container pulls the latest version.
+- **Contain what skills can do**: skills run with full agent permissions; inside a container they only reach what the container can.
+
 ## Requirements
 
 Requires the [node feature](https://github.com/devcontainers/features/tree/main/src/node) with pnpm (enabled by default).
