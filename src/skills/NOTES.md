@@ -32,4 +32,4 @@ Install to another agent (e.g. `codex`, `cursor`, `gemini-cli`, `github-copilot`
 }
 ```
 
-Run `pnpm dlx skills add --help` for the full list of supported agents.
+See the [skills CLI](https://github.com/vercel-labs/skills) for the full list of supported agents.
