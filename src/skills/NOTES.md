@@ -23,6 +23,14 @@ Sources accept anything `skills add` does: `owner/repo`, a GitHub URL, and so on
 }
 ```
 
+Append `@<skill>` to install only that skill from a repository:
+
+```json
+"ghcr.io/mezum/devcontainer-features/skills:1": {
+    "skills": "vercel-labs/agent-skills@web-design-guidelines,anthropics/skills@pdf"
+}
+```
+
 Install to another agent (e.g. `codex`, `cursor`, `gemini-cli`, `github-copilot`), or to all agents with `*`:
 
 ```json
