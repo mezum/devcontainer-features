@@ -1,18 +1,33 @@
 {
 	"id": "skills",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"name": "Agent Skills",
 	"description": "Installs agent skills via `pnpm dlx skills add`",
 	"options": {
 		"skills": {
 			"type": "string",
 			"default": "",
+			"proposals": [
+				"vercel-labs/agent-skills",
+				"anthropics/skills",
+				"vercel-labs/agent-skills@web-design-guidelines",
+				"vercel-labs/agent-skills,anthropics/skills",
+				"https://github.com/vercel-labs/agent-skills"
+			],
 			"description": "Comma-separated sources passed to `skills add` (e.g. vercel-labs/agent-skills,anthropics/skills)"
 		},
 		"agent": {
 			"type": "string",
 			"default": "claude-code",
-			"description": "Target agent passed to `skills add --agent`"
+			"proposals": [
+				"claude-code",
+				"codex",
+				"cursor",
+				"gemini-cli",
+				"github-copilot",
+				"*"
+			],
+			"description": "Target agent passed to `skills add --agent` (`*` for all agents)"
 		}
 	},
 	"installsAfter": [

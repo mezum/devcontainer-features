@@ -7,5 +7,14 @@
 				"skills": "vercel-labs/agent-skills"
 			}
 		}
+	},
+	"with_single_skill": {
+		"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+		"features": {
+			"ghcr.io/devcontainers/features/node:1": {},
+			"skills": {
+				"skills": "vercel-labs/agent-skills@web-design-guidelines"
+			}
+		}
 	}
 }
